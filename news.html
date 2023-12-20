@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Travly</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class ="home-main">
+        <nav>
+                <a href="./">
+                    <img src="assets/travly.png" alt="Travly">
+                </a>
+                <ul>
+                    <li><a href="./about">About us</a></li>
+                    <li><a href="./destinations">Destinations</a></li>
+                    <li><a href="./news">News</a></li>
+                    <li><a href="./planning">Planning</a></li>
+                </ul>
+                <form>
+                    <i class="fa fa-search"></i>
+                    <input type="text" id="searchMain" placeholder="Search...">
+                </form>
+        </nav>
+        <h1>Travel News</h1>
+    </header>
+    <main>
+        <form class="search-news">
+            <i class="fa fa-search"></i>
+            <input type="text" id="searchNews" placeholder="Search news">
+        </form>
+        <div class="filter-sort-container">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="All">All</option>
+                <option value="road-trip">Road Trip</option>
+                <option value="travel-stories">Travel Stories</option>
+                <option value="tips-advice">Tips and Advice</option>
+            </select>
+            <label for="sort">Sort:</label>
+            <select id="sort">
+                <option value="Category">Category</option>
+                <option value="Date">Date</option>
+            </select>
+        </div>        
+        <section class="news-grid">
+            <article>
+                <img src="assets/travel_stories.jpg" alt="News1">
+                <h6 category="travel-stories">Travel Stories</h6>
+                <a href="news.html">
+                    <h4>A first-timer's guide to the Midwest</h4>
+                </a>
+                <p>Think the Midwest is a cornfield you fly over between coasts? Think again. This first-timer’s guide
+                    details everything you need to know about the Midwest.</p>
+                <div>Sep 26, 2023 -7 min read</div>
+            </article>
+            <article>
+                <img src="assets/day_trip1.jpg" alt="News2">
+                <h6 category="road-trip">Road trip</h6>
+                <a href="news.html">
+                    <h4>The top 9 day trips from Bogota</h4>
+                </a>
+                <p>Beyond Bogota you’ll find a wide variety of easy day trips that get you out into nature with hiking,
+                    rock climbing and a surprising theme park.</p>
+                <div>Sep 25, 2023 -10 min read</div>
+            </article>
+            <article>
+                <img src="assets/day_trip2.jpg" alt="News3">
+                <h6 category="road-trip">Road trip</h6>
+                <a href="news.html">
+                    <h4>The 5 most beautiful road trips in Maine</h4>
+                </a>
+                <p>There’s no better way to explore the wildly beautiful landscapes of Maine than on a road trip. Here
+                    are five of our favorites.</p>
+                <div>Sep 19, 2023 -10 min read</div>
+            </article>
+            <article>
+                <img src="assets/family_travel.jpg" alt="News4">
+                <h6 category="tips-advice">Tips and Advice</h6>
+                <a href="news.html">
+                    <h4>The best things to do with kids in Singapore</h4>
+                </a>
+                <p>With its tropical climate, top-notch infrastructure, abundant green spaces and awesome child-friendly
+                    attractions, Singapore is a top destination for kids. </p>
+                <div>Sep 6, 2023 -5 min read</div>
+            </article>
+        </section>        
+        <h2>Traveling on a budget</h2>
+        <section class="budget-travel-grid">
+            <article>
+                <img src="assets/budget_travel1.jpg" alt="Budget1">
+                <h3>How to visit Florida on a budget</h3>
+            </article>
+            <article>
+                <img src="assets/budget_travel2.jpg" alt="Budget2">
+                <h3>10 tips for exploring the USA on a budget</h3>
+            </article>
+            <article>
+                <img src="assets/budget_travel3.jpg" alt="Budget3">
+                <h3>10 ways to experience Montana on a budget</h3>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <ul class="footer-columns">
+            <li class="column">
+                <ul class="links">
+                    <li class="ehlel"><a href="">Эхлэл</a></li>
+                    <li class="contact"><a href="">Холбоо барих</a></li>
+                    <li class="privacy"><a href="">Нууцлалын бодлого</a></li>
+                    <li class="terms"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="faq"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                    <li class="help"><a href="">Тусламж</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var filterSelect = document.getElementById('filter');
+            var newsGrid = document.getElementById('newsGrid');
+            var budgetTravelGrid = document.getElementById('budgetTravelGrid');
+
+            filterSelect.addEventListener('change', function () {
+                var selectedCategory = filterSelect.value;
+                filterNews(selectedCategory);
+            });
+
+            filterNews('All');
+
+            function filterNews(category) {
+                var articles = document.querySelectorAll('.news-grid article');
+
+                articles.forEach(function (article) {
+                    var articleCategory = article.querySelector('h6').getAttribute('category');
+                    if (category === 'All' || articleCategory === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

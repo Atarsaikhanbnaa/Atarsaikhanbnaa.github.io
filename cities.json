@@ -1,0 +1,83 @@
+[
+    {
+        "name": "London",
+        "id": 1,
+        "img" : "/assets/london.jpg",
+        "budget": 191,
+        "foodCost": 60,
+        "accomodationCost": 71,
+        "transportationCost": 60
+    },
+    {
+        "name": "Beijing",
+        "id": 2,
+        "img" : "/assets/beijing.jpg",
+        "budget": 140,
+        "foodCost": 37,
+        "accomodationCost": 55,
+        "transportationCost": 48
+    },
+    {
+        "name": "Berlin",
+        "id": 3,
+        "img" : "/assets/berlin.jpg",
+        "budget": 175,
+        "foodCost": 55,
+        "accomodationCost": 54,
+        "transportationCost": 66
+    },
+    {
+        "name": "Tokyo",
+        "id": 4,
+        "img" : "/assets/tokyo.jpg",
+        "budget": 156,
+        "foodCost": 49,
+        "accomodationCost": 60,
+        "transportationCost": 47
+    },
+    {
+        "name": "Dubai",
+        "id": 5,
+        "img" : "/assets/dubai.jpg",
+        "budget": 291,
+        "foodCost": 84,
+        "accomodationCost": 113,
+        "transportationCost": 94
+    },
+    {
+        "name": "Bali",
+        "id": 6,
+        "img" : "/assets/bali.jpg",
+        "budget": 207,
+        "foodCost": 81,
+        "accomodationCost": 67,
+        "transportationCost": 59
+    },
+    {
+        "name": "Baku",
+        "id": 7,
+        "img" : "/assets/baku.jpg",
+        "budget": 218,
+        "foodCost": 65,
+        "accomodationCost": 76,
+        "transportationCost": 77
+    },
+    {
+        "name": "Ankara",
+        "id": 8,
+        "img" : "/assets/ankara.jpg",
+        "budget": 245,
+        "foodCost": 71,
+        "accomodationCost": 85,
+        "transportationCost": 89
+    },
+    {
+        "name": "Moscow",
+        "id": 9,
+        "img" : "/assets/moscow.jpg",
+        "budget": 220,
+        "foodCost": 92,
+        "accomodationCost": 67,
+        "transportationCost": 61
+    }
+]

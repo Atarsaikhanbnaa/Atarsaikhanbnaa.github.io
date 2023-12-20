@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning - Travly</title>
+    <link rel="stylesheet" href="planning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="planning.js" defer></script>
+    <script type="module" src="city-info-card.js"></script>
+</head>
+
+<body>
+    <header class="home-main">
+        <nav>
+            <a href="./">
+                <img src="assets/travly.png" alt="Travly">
+            </a>
+            <ul>
+                <li><a href="./about">About us</a></li>
+                <li><a href="./destinations">Destinations</a></li>
+                <li><a href="./news">News</a></li>
+                <li><a href="./planning">Planning</a></li>
+            </ul>
+            <form>
+                <i class="fa fa-search"></i>
+                <input type="text" id="searchMain" placeholder="Search...">
+            </form>
+        </nav>
+        <h1>Trip budgeting</h1>
+    </header>
+    <main>
+        <h2>Estimate your expenses</h2>
+        <p class="p">Making the most of your travel budget opens up a world of possibilities. Discover how travel
+            experts maximize points and miles, find top loyalty programs and redeem travel rewards. </p>
+        <form class="search">
+            <i class="fa fa-search fa-lg"></i>
+            <input class="formInput" type%="text" id="searchCity" placeholder="Search cities">
+        </form>
+        <city-info-card head="Tokyo" estbud="160" fd="49" acc="60" trns="47" img="assets/tokyo.jpg"></city-info-card>
+        <city-info-card head="Bali" estbud="207" fd="81" acc="67" trns="59" img="assets/bali.jpg"></city-info-card>
+        <city-info-card head="Moscow" estbud="220" fd="92" acc="67" trns="61" img="assets/moscow.jpg"></city-info-card>
+        <h3>Sort by</h3>
+        <div class="Sort"><i class="fa fa-home" aria-hidden="true"></i>Accomodation cost </div>
+        <div class="Sort"><i class='fa fa-cutlery'></i>Food cost </div>
+        <div class="Sort"><i class="fa fa-car" aria-hidden="true"></i>Transportation cost</div>
+        <section>
+            <h4>London</h4>
+            <img class="london" src="assets/london.png" alt="London">
+            <p class="budget">Estimated budget: ($191)</p>
+            <label for="days">Filter:</label>
+            <div id="dayButtons">
+                <input type="radio" id="btn1day" name="filter" value="1">
+                <label for="btn1day">1 day</label>
+
+                <input type="radio" id="btn5days" name="filter" value="5">
+                <label for="btn5days">5 days</label>
+
+                <input type="radio" id="btn10days" name="filter" value="10">
+                <label for="btn10days">10 days</label>
+            </div>
+            <ul class="Bud">
+                <li>Food ($60)</li>
+                <li>Accomodation ($71)</li>
+                <li>Transportation ($60)</li>
+            </ul>
+        </section>
+        <h5>Traveling on a budget</h5>
+        <section>
+            <article class="recommendations">
+                <a href="FloridaBudget.html"><img src="assets/budget_travel1.jpg" alt="Florida">
+                    <h6>How to visit Florida on a budget</h6>
+                </a>
+            </article>
+            <article class="recommendations">
+                <a href="USABudget.html"><img src="assets/budget_travel2.jpg" alt="USA">
+                    <h6>10 tips for exploring the USA on a budget</h6>
+                </a>
+            </article>
+            <article class="recommendations">
+                <a href="MontanaBudget.html"><img src="assets/budget_travel3.jpg" alt="Montana">
+                    <h6>10 ways to experience Montana on a budget</h6>
+                </a>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <ul class="footer-columns">
+            <li class="column">
+                <ul class="links">
+                    <li class="ehlel"><a href="">Эхлэл</a></li>
+                    <li class="contact"><a href="">Холбоо барих</a></li>
+                    <li class="privacy"><a href="">Нууцлалын бодлого</a></li>
+                    <li class="terms"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="faq"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                    <li class="help"><a href="">Тусламж</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                    <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+            </li>
+        </ul>
+        </li>
+        </ul>
+    </footer>
+    <template id="city-info-card-template">
+        <style>
+            .city-info-card {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 12px;
+                width: fit-content;
+            }
+
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-top: 10px;
+            }
+
+            #city-info-card-template {
+                width: 100%;
+                background-color: red;
+            }
+        </style>
+        <div class="city-info-card_container">
+            <div class="city-info-card">
+                <h4></h4>
+                <img src="" alt="">
+                <p class="budget">Estimated budget: <span id="estPrice"></span></p>
+                <label for="days">Filter:</label>
+                <div id="dayButtons">
+                    <input type="radio" name="filter" value="1">
+                    <label for="btn1day">1 day</label>
+
+                    <input type="radio" name="filter" value="5">
+                    <label for="btn5days">5 days</label>
+
+                    <input type="radio" name="filter" value="10">
+                    <label for="btn10days">10 days</label>
+                </div>
+                <ul class="Bud">
+                    <li>Food (<span id="fdPrice"></span>)</li>
+                    <li>Accommodation (<span id="accPrice"></span>)</li>
+                    <li>Transportation (<span id="trnsPrice"></span>)</li>
+                </ul>
+            </div>
+
+        </div>
+        <script>
+
+        </script>
+    </template>
+
+</body>
+
+</html>

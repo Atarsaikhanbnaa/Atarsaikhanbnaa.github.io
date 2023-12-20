@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travly</title>
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class ="home-main">
+        <nav>
+                <a href="./">
+                    <img src="assets/travly.png" alt="Travly">
+                </a>
+                <ul>
+                    <li><a href="./about">About us</a></li>
+                    <li><a href="./destinations">Destinations</a></li>
+                    <li><a href="./news">News</a></li>
+                    <li><a href="./planning">Planning</a></li>
+                </ul>
+                <form>
+                    <i class="fa fa-search"></i>
+                    <input type="text" id="searchMain" placeholder="Search...">
+                </form>
+        </nav>
+        <h1>Destinations</h1>
+    </header>
+    <main>
+        <form class="search-places">
+            <i class="fa fa-search"></i>
+            <input type="text" id="searchPlaces" placeholder="Search places">
+        </form>
+        <div class="radio-container">
+            <input type="radio" id="sort-all" name="sort" value="All" checked>
+            <label for="sort-all">All</label>
+
+            <input type="radio" id="sort-favorites" name="sort" value="Favorites">
+            <label for="sort-favorites">Favorites</label>
+            
+            <input type="radio" id="sort-asia" name="sort" value="Asia">
+            <label for="sort-asia">Asia</label>
+            
+            <input type="radio" id="sort-europe" name="sort" value="Europe">
+            <label for="sort-europe">Europe</label>
+            
+            <input type="radio" id="sort-northamerica" name="sort" value="NorthAmerica">
+            <label for="sort-northamerica">North America</label>
+            
+            <input type="radio" id="sort-southamerica" name="sort" value="SouthAmerica">
+            <label for="sort-southamerica">South America</label>
+        </div>        
+        <section class="city-grid">
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/bali.jpg" alt="Bali">
+                    <h4>Bali</h4>
+                </a>
+            </article>
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/baku.jpg" alt="Baku">
+                    <h4>Baku</h4>
+                </a>
+            </article>
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/beijing.jpg" alt="Beijing">
+                    <h4>Beijing</h4>
+                </a>
+            </article>
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/ankara.jpg" alt="Ankara">
+                    <h4>Ankara</h4>
+                </a>
+            </article>
+            <article data-region="Europe">
+                <a href="city.html">
+                    <img src="assets/berlin.jpg" alt="Berlin">
+                    <h4>Berlin</h4>
+                </a>
+            </article data-region="Europe">
+            <article>
+                <a href="city.html">
+                    <img src="assets/london1.jpg" alt="London">
+                    <h4>London</h4>
+                </a>
+            </article>
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/dubai.jpg" alt="Dubai">
+                    <h4>Dubai</h4>
+                </a>
+            </article>
+            <article data-region="Europe">
+                <a href="city.html">
+                    <img src="assets/moscow.jpg" alt="Moscow">
+                    <h4>Moscow</h4>
+                </a>
+            </article>
+            <article data-region="Asia">
+                <a href="city.html">
+                    <img src="assets/tokyo.jpg" alt="Tokyo">
+                    <h4>Tokyo</h4>
+                </a>
+            </article>
+        </section>
+        <section class="pagination">
+            <button class="pagination-button disabled">&lt;</button>
+            <button class="pagination-button active">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">></button>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <ul class="footer-columns">
+            <li class="column">
+                <ul class="links">
+                    <li class="ehlel"><a href="">Эхлэл</a></li>
+                    <li class="contact"><a href="">Холбоо барих</a></li>
+                    <li class="privacy"><a href="">Нууцлалын бодлого</a></li>
+                    <li class="terms"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="faq"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                    <li class="help"><a href="">Тусламж</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var radioButtons = document.querySelectorAll('input[name="sort"]');
+            var articles = document.querySelectorAll('.city-grid article');
+    
+            var urlParams = new URLSearchParams(window.location.search);
+            var initialSort = urlParams.get('sort');
+            var initialSearch = urlParams.get('search');
+    
+            radioButtons.forEach(function (radioButton) {
+                if (radioButton.value === initialSort) {
+                    radioButton.checked = true;
+                }
+            });
+    
+            function updateUrlParams() {
+                var selectedSort = document.querySelector('input[name="sort"]:checked').value;
+                var url = new URL(window.location.href);
+                url.searchParams.set('sort', selectedSort);
+                history.pushState({}, '', url);
+            }
+    
+            function filterArticlesByRegion(selectedRegion) {
+                articles.forEach(function (article) {
+                    var articleRegion = article.dataset.region;
+    
+                    if (selectedRegion === 'All' || articleRegion === selectedRegion) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            }
+    
+            radioButtons.forEach(function (radioButton) {
+                radioButton.addEventListener('change', function () {
+                    updateUrlParams();
+                    var selectedRegion = this.value;
+                    filterArticlesByRegion(selectedRegion);
+                });
+            });
+    
+            // Initial filtering based on the selected region and search term
+            filterArticlesByRegion(initialSort);
+    
+            // Apply search term if available
+            var searchInput = document.getElementById('searchPlaces');
+            if (initialSearch) {
+                searchInput.value = initialSearch;
+            }
+    
+            // Trigger change event after setting initial values
+            var selectedRadioButton = document.querySelector('input[name="sort"]:checked');
+            if (selectedRadioButton) {
+                selectedRadioButton.dispatchEvent(new Event('change'));
+            }
+        });
+    </script>
+     
+
+        
+
+</body>
+</html>

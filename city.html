@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City - Travly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="city.css">
+</head>
+
+<body>
+    <header class="home-main">
+        
+        <nav>
+            <a href="./">
+                <img src="assets/travly.png" alt="Travly">
+            </a>
+            <ul>
+                <li><a href="./about">About us</a></li>
+                <li><a href="./destinations">Destinations</a></li>
+                <li><a href="./news">News</a></li>
+                <li><a href="./planning">Planning</a></li>
+            </ul>
+            <form>
+                <i class="fa fa-search"></i>
+                <input type="text" id="searchMain" placeholder="Search...">
+            </form>
+    </nav>
+
+    </header>
+    <main>
+            <h2 class="dubai">Dubai</h2>
+        <p class="dubaiP">United Arab Emirates</p>
+        <p class="par">Dubai is a stirring alchemy of profound traditions and ambitious futuristic vision wrapped into starkly
+            evocative desert splendor.</p>
+        <section class="container">
+            <article>
+                <img  src="assets/burj-al-arab.jpg" alt="BurjAlArab" >
+                <h3>Burj Al Arab</h3>
+                <p class="pTag">The Burj Al Arab's graceful silhouette – meant to evoke the sail of a dhow (a traditional wooden
+                    cargo vessel) – is to Dubai what the Eiffel Tower is to…</p>
+            </article>
+            <article>
+                <img class="BurjHalifa" src="assets/burj-khalifa.jpg" alt="BurjKhalifa">
+                <h3>Burj Khalifa</h3>
+                <p class="pTag">The Burj Khalifa is a stunning feat of architecture and engineering, with two observation decks on
+                    the 124th and 148th floors and a restaurant-bar on the…</p>
+            </article>
+            <article>
+                <img  src="assets/madinat-jumeirah.jpg" alt="MadinatJumeirah">
+                <h3>Madinat Jumeirah</h3>
+                <p class="pTag">One of Dubai’s most attractive developments, Madinat Jumeirah is a contemporary interpretation of a
+                    traditional Arab village, complete with a souq market…</p>
+            </article>
+            <article>
+                <img src="assets/kite-beach.jpg" alt="KiteBeach">
+                <h3>Kite Beach</h3>
+                <p class="pTag">This long, pristine stretch of white sand, a little way north of Jumeirah Public Beach, is a major
+                    draw for sporty types, with a range of activities on…</p>
+            </article> 
+        </section>
+         <button class="button">View all attractions</button>
+
+        <article class="art">
+            <h4>Expert guidance to help you plan your trip</h4>
+            <div class="bac"> 
+                <div  class="ok"><i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                <h5 >Accommodation</h5>
+                </div>
+                <p class="text">Dubai is a sprawling city, so it pays to plan your visit wisely. Instead of packing in too many
+                    sights, get to know the city’s neighborhoods one at a time. </p>
+            </div>
+            
+            <div class="bac">
+               <div class="ok"> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>
+                <h5>Activities</h5>
+                </div>
+                <p class="text">You’ll find everything from mosques and museums to mountain bike trails and ziplines within day-trip
+                    distance of Dubai. Here are the best spots to visit.</p>
+            </div>
+            <div class="bac">
+                <div class="ok"><i class="fa fa-car fa-lg" aria-hidden="true"></i>
+                <h5>Transportation</h5></div>
+                <p class="text">Getting around Dubai requires some form of transport, whether that’s taking a taxi, using rideshare
+                    apps, hopping on public transport or driving yourself.</p>
+            </div>
+            <div class="bac">
+                <div class="ok"><i class='fa fa-cutlery fa-lg'></i>
+                <h5>Food and Culture</h5></div>
+                <p class="text">Whether you're dining in a luxurious skyscraper, Dubai's culinary offerings promise a delightful
+                    journey through its rich food and culture.</p>
+            </div>
+        </article>
+        <h4>Dubai and beyond</h4>
+        <button class="button1">Beyond Dubai</button>
+        <section >
+            <article>
+                <a href="city.html">
+                    <img src="assets/abu-dhabi.jpg" alt="AbuDhabi">
+                    <h6>Abu Dhabi</h6>
+                </a>
+            </article>
+            <article>
+                <a href="city.html">
+                    <img src="assets/sharjah.jpg" alt="Sharjah">
+                    <h6>Sharjah</h6>
+                </a>
+            </article>
+            <article>
+                <a href="city.html">
+                    <img src="assets/al-ain.jpg" alt="AlAin">
+                    <h6>Al Ain</h6>
+                </a>
+            </article>
+            <article>
+                <a href="city.html">
+                    <img src="assets/ras-al-khaimah.jpg" alt="RasAlKhaimah">
+                    <h6>Ras Al Khaimah</h6>
+                </a>
+            </article>
+        </section>
+        <h4>Reviews</h4>
+        <article class=person>
+            <div class="comment">
+            <img class="picture" src="assets/review1.jpg" alt="ReviewUser1">
+            <p class="commentP">Traveling and spending time in Abu Dhabi was great! Especially because with friends, there was alot of
+                activities to do and sights to see. Amazing place!!</p></div>
+                <div class="comment">
+            <img class="picture" src="assets/review2.jpg" alt="ReviewUser2">
+            <p class="commentP">Al Ain was one of the most majestic places I’ve ever been in. To anyone who loves seeing the sunrise,
+                this is the place for you.</p></div>
+        </article>
+        <form action="/action_page.php" method="get" id="com">
+            <label for="comment"></label>
+            <input class="formInput" type="text" id="comment" name="comment" placeholder="Share your experience">
+            <input class="formButton"  type="button" value="Post" onclick="submitForm();"></input>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <ul class="footer-columns">
+            <li class="column">
+                <ul class="links">
+                    <li class="ehlel"><a href="">Эхлэл</a></li>
+                    <li class="contact"><a href="">Холбоо барих</a></li>
+                    <li class="privacy"><a href="">Нууцлалын бодлого</a></li>
+                    <li class="terms"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="faq"><a href="">Үйлчилгээний журам болон нөхцөл</a></li>
+                    <li class="help"><a href="">Тусламж</a></li>
+                </ul>
+            </li>
+            <li class="column">
+                <ul class="links">
+                    <li class="social"><a href="">Биднийг дагаарай</a></li>
+                        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>  
+    <script>
+        let count=0;
+        function oncomment(a){
+            
+            document.querySelector(".person").insertAdjacentHTML(
+                "beforeend",
+                `<div class="comment">
+            <img class="picture" src="assets/review1.jpg" alt="ReviewUser1">
+            <p class="commentP">${a}</p></div>`
+            );
+            count++;
+            document.getElementById("comment-counter").innerHTML=count;
+           
+        }
+        function submitForm() {
+            let a=document.getElementById('comment').value;       
+  // Get the form element
+  var form = document.getElementById("com");
+
+  // Reset the form
+  form.reset();
+  oncomment(a);
+}
+    </script>
+</body>
+
+</html>
